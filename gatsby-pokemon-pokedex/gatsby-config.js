@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "First Gatsby Site",
+    title: "Gatsby Pokemon Pokedex",
     content: "Content from Metadata"
   },
   plugins: [
