@@ -1,5 +1,7 @@
 import Button from './pages/Button'
 import AppBar from './components/AppBar'
+import { Switch, Route } from 'react-router-dom'
+import Home from './pages/Home'
 
 
 function App() {
@@ -7,7 +9,16 @@ function App() {
     <div className="App">
       <AppBar />
 
-      <Button />
+      <Switch>
+        <Route exact path="/button">
+          <Button />
+        </Route>
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+
     </div>
   );
 }

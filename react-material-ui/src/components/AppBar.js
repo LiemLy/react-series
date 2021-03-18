@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppBar, IconButton, Typography, MenuIcon, Toolbar, Button, Icon, makeStyles } from "@material-ui/core";
 import { Menu } from '@material-ui/icons'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => {
     return {
@@ -30,7 +31,8 @@ const AppBarComponent = () => {
 
                     <Typography variant="h6" className={classes.title}>REACT MATERIAL UI</Typography>
 
-                    <Button color="inherit">Button Page</Button>
+                    <Button component={Link} to={'/'} color="inherit">Home</Button>
+                    <Button component={Link} color="inherit" to={'/button'}>Button</Button>
 
                 </Toolbar>
             </AppBar>
