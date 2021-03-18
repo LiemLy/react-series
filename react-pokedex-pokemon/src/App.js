@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import ButtonAppBar from './components/ButtonAppBar'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import blue from '@material-ui/core/colors/blue';
+import Pokedex from './pages/Pokedex'
+import Container from '@material-ui/core/Container';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: blue[700],
+    }
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <div className="App">
+        <ButtonAppBar />
+
+        <Container maxWidth="md">
+          <Pokedex />
+        </Container>
+
+
+      </div>
+    </ThemeProvider>
+
   );
 }
 
