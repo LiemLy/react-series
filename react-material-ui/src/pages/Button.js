@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, IconButton, Typography } from "@material-ui/core";
+import { Button, IconButton, Typography, Container } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import { PhotoCamera, Delete, Send } from '@material-ui/icons';
 
@@ -18,7 +18,7 @@ const Home = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <Container>
 
             <Typography className={classes.root} variant="h6">1.Contained Buttons</Typography>
 
@@ -132,7 +132,7 @@ const Home = () => {
                 </Button>
             </div>
 
-        </div>
+        </Container>
 
     )
 }
