@@ -36,6 +36,7 @@ const AppBarComponent = () => {
                     {/* <Typography component={Link} to={'/'} variant="h6" className={classes.title}> <Home></Home>REACT MATERIAL UI</Typography> */}
 
                     <Button component={Link} color="inherit" to={'/button'}>Button</Button>
+                    <Button component={Link} color="inherit" to={'/checkbox'}>Checkbox</Button>
                     <Button component={Link} color="inherit" to={'/button-group'}>Button Group</Button>
 
                 </Toolbar>

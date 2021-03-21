@@ -3,6 +3,7 @@ import AppBar from './components/AppBar'
 import { Switch, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import ButtonGroup from './pages/ButtonGroup'
+import Checkbox from './pages/Checkbox'
 import { ThemeProvider } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
@@ -28,6 +29,11 @@ function App() {
 
           <Route exact path="/button">
             <Button />
+          </Route>
+
+
+          <Route exact path="/checkbox">
+            <Checkbox />
           </Route>
 
           <Route exact path="/">
