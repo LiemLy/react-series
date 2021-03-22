@@ -38,6 +38,7 @@ const AppBarComponent = () => {
                     <Button component={Link} color="inherit" to={'/button'}>Button</Button>
                     <Button component={Link} color="inherit" to={'/checkbox'}>Checkbox</Button>
                     <Button component={Link} color="inherit" to={'/button-group'}>Button Group</Button>
+                    <Button component={Link} color="inherit" to={'/floating-action-button'}>Floating Action Button</Button>
 
                 </Toolbar>
             </AppBar>
