@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import ButtonGroup from './pages/ButtonGroup'
 import Checkbox from './pages/Checkbox'
 import FloatingActionButton from './pages/FloatingActionButton'
+import DateTime from './pages/DateTime'
 import { ThemeProvider } from '@material-ui/core'
 import { createMuiTheme } from '@material-ui/core/styles';
 import blue from '@material-ui/core/colors/blue';
@@ -32,9 +33,12 @@ function App() {
             <Button />
           </Route>
 
-
           <Route exact path="/checkbox">
             <Checkbox />
+          </Route>
+
+          <Route exact path="/date-time">
+            <DateTime />
           </Route>
 
           <Route exact path="/floating-action-button">

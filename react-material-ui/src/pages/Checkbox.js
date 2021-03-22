@@ -54,7 +54,6 @@ const CheckboxPage = () => {
                 <Checkbox defaultChecked disabled color="secondary" />
                 <Checkbox defaultChecked indeterminate color="secondary" />
                 <Checkbox defaultChecked size="small" color="secondary" />
-
             </div>
 
             <div className={classes.item}>
