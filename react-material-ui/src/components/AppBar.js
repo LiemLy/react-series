@@ -3,7 +3,6 @@ import {
   AppBar,
   IconButton,
   Typography,
-  MenuIcon,
   Toolbar,
   Button,
   Icon,
@@ -30,8 +29,8 @@ const AppBarComponent = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+    <React.Fragment>
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             className={classes.menuButton}
@@ -70,7 +69,7 @@ const AppBarComponent = () => {
           </Button>
         </Toolbar>
       </AppBar>
-    </div>
+    </React.Fragment>
   );
 };
 

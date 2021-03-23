@@ -6,9 +6,22 @@ import ButtonGroup from "./pages/ButtonGroup";
 import Checkbox from "./pages/Checkbox";
 import FloatingActionButton from "./pages/FloatingActionButton";
 import DateTime from "./pages/DateTime";
-import { ThemeProvider } from "@material-ui/core";
+import {
+  ThemeProvider,
+  makeStyles,
+  Drawer,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import { Inbox as InboxIcon, Mail as MailIcon } from "@material-ui/icons";
 import { createMuiTheme } from "@material-ui/core/styles";
 import blue from "@material-ui/core/colors/blue";
+import SideBar from "./components/SideBar";
 
 const theme = createMuiTheme({
   palette: {
@@ -18,36 +31,73 @@ const theme = createMuiTheme({
   },
 });
 
+const drawerWidth = 240;
+
+const useStyles = makeStyles((theme) => {
+  return {
+    root: {
+      display: "flex",
+      minHeight: "100vh",
+    },
+    appBar: {
+      width: `calc(100% - ${drawerWidth}px)`,
+      marginLeft: drawerWidth,
+    },
+    drawer: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+    drawerPaper: {
+      width: drawerWidth,
+    },
+    // necessary for content to be below app bar
+    toolbar: theme.mixins.toolbar,
+    content: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.background.default,
+      padding: theme.spacing(3),
+      // height: `calc(100% - ${theme.mixins.toolbar.height})`,
+    },
+  };
+});
+
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
+    <div className={classes.root}>
       <ThemeProvider theme={theme}>
-        <AppBar />
-        <Switch>
-          <Route exact path="/button-group">
-            <ButtonGroup />
-          </Route>
+        <AppBar className={classes.appBar} />
+        <SideBar classes={classes} />
 
-          <Route exact path="/button">
-            <Button />
-          </Route>
+        <main className={classes.content}>
+          <Toolbar />
+          <Switch>
+            <Route exact path="/button-group">
+              <ButtonGroup />
+            </Route>
 
-          <Route exact path="/checkbox">
-            <Checkbox />
-          </Route>
+            <Route exact path="/button">
+              <Button />
+            </Route>
 
-          <Route exact path="/date-time">
-            <DateTime />
-          </Route>
+            <Route exact path="/checkbox">
+              <Checkbox />
+            </Route>
 
-          <Route exact path="/floating-action-button">
-            <FloatingActionButton />
-          </Route>
+            <Route exact path="/date-time">
+              <DateTime />
+            </Route>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
+            <Route exact path="/floating-action-button">
+              <FloatingActionButton />
+            </Route>
+
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </main>
       </ThemeProvider>
     </div>
   );
