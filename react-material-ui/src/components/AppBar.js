@@ -8,7 +8,7 @@ import {
   Icon,
   makeStyles,
 } from "@material-ui/core";
-import { Menu, Home } from "@material-ui/icons";
+import { Menu, GitHub, Facebook, YouTube } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => {
@@ -48,25 +48,29 @@ const AppBarComponent = () => {
 
           {/* <Typography component={Link} to={'/'} variant="h6" className={classes.title}> <Home></Home>REACT MATERIAL UI</Typography> */}
 
-          <Button component={Link} color="inherit" to={"/button"}>
-            Button
-          </Button>
-          <Button component={Link} color="inherit" to={"/checkbox"}>
-            Checkbox
-          </Button>
-          <Button component={Link} color="inherit" to={"/button-group"}>
-            Button Group
-          </Button>
-          <Button
-            component={Link}
+          <IconButton
+            className={classes.menuButton}
             color="inherit"
-            to={"/floating-action-button"}
+            edge="start"
           >
-            Floating Action Button
-          </Button>
-          <Button component={Link} color="inherit" to={"/date-time"}>
-            DateTime
-          </Button>
+            <GitHub />
+          </IconButton>
+
+          <IconButton
+            className={classes.menuButton}
+            color="inherit"
+            edge="start"
+          >
+            <Facebook />
+          </IconButton>
+
+          <IconButton
+            className={classes.menuButton}
+            color="inherit"
+            edge="start"
+          >
+            <YouTube />
+          </IconButton>
         </Toolbar>
       </AppBar>
     </React.Fragment>
