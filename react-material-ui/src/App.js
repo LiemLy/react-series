@@ -1,14 +1,14 @@
-import Button from './pages/Button'
-import AppBar from './components/AppBar'
-import { Switch, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import ButtonGroup from './pages/ButtonGroup'
-import Checkbox from './pages/Checkbox'
-import FloatingActionButton from './pages/FloatingActionButton'
-import DateTime from './pages/DateTime'
-import { ThemeProvider } from '@material-ui/core'
-import { createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
+import Button from "./pages/Button";
+import AppBar from "./components/AppBar";
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ButtonGroup from "./pages/ButtonGroup";
+import Checkbox from "./pages/Checkbox";
+import FloatingActionButton from "./pages/FloatingActionButton";
+import DateTime from "./pages/DateTime";
+import { ThemeProvider } from "@material-ui/core";
+import { createMuiTheme } from "@material-ui/core/styles";
+import blue from "@material-ui/core/colors/blue";
 
 const theme = createMuiTheme({
   palette: {
@@ -17,7 +17,6 @@ const theme = createMuiTheme({
     },
   },
 });
-
 
 function App() {
   return (
