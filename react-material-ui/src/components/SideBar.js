@@ -74,6 +74,12 @@ function SideBar({ classes }) {
             <ListItemText primary={"Radio Button"} />
           </ListItem>
 
+          <ListItem component={Link} to={"/select"} button>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary={"Select"} />
+          </ListItem>
         </List>
         <Divider />
       </Drawer>

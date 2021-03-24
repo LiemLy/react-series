@@ -11,6 +11,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import blue from "@material-ui/core/colors/blue";
 import SideBar from "./components/SideBar";
 import RadioButton from "./pages/RadioButton";
+import Select from './pages/Select' 
 
 const theme = createMuiTheme({
   palette: {
@@ -88,6 +89,10 @@ function App() {
 
             <Route exact path="/radio-button">
               <RadioButton />
+            </Route>
+
+            <Route exact path="/select">
+              <Select />
             </Route>
 
             <Route exact path="/">
