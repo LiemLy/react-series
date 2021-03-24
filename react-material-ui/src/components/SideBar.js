@@ -8,7 +8,7 @@ import {
   ListItemIcon,
   MenuIcon,
 } from "@material-ui/core";
-import { Inbox as InboxIcon, Mail as MailIcon } from "@material-ui/icons";
+import { Inbox as InboxIcon, Mail as MailIcon, Send } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 function SideBar({ classes }) {
@@ -27,56 +27,56 @@ function SideBar({ classes }) {
         <List>
           <ListItem component={Link} to={"/"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Home"} />
           </ListItem>
 
           <ListItem component={Link} to={"/button"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Button"} />
           </ListItem>
 
           <ListItem component={Link} to={"/checkbox"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Checkbox"} />
           </ListItem>
 
           <ListItem component={Link} to={"/button-group"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Button Group"} />
           </ListItem>
 
           <ListItem component={Link} to={"/floating-action-button"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Floating Action Button"} />
           </ListItem>
 
           <ListItem component={Link} to={"/date-time"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Datetime"} />
           </ListItem>
 
           <ListItem component={Link} to={"/radio-button"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Radio Button"} />
           </ListItem>
 
           <ListItem component={Link} to={"/select"} button>
             <ListItemIcon>
-              <InboxIcon />
+              <Send />
             </ListItemIcon>
             <ListItemText primary={"Select"} />
           </ListItem>
