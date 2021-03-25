@@ -95,6 +95,13 @@ function SideBar({ classes }) {
             <ListItemText primary={"Switch"} />
           </ListItem>
 
+          <ListItem component={Link} to={"/textfield"} button>
+            <ListItemIcon>
+              <Send />
+            </ListItemIcon>
+            <ListItemText primary={"Text Field"} />
+          </ListItem>
+
         </List>
         <Divider />
       </Drawer>

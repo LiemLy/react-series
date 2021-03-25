@@ -6,6 +6,11 @@ import {
   FormControlLabel,
 } from "@material-ui/core";
 
+// import Typography from '@material-ui/core/Typography'
+// import Switch from '@material-ui/core/Switch'
+// import FormGroup from '@material-ui/core/FormGroup'
+// import FormControlLabel from '@material-ui/core/FormControlLabel'
+
 function SwitchPage() {
   const [state, setState] = useState({
     checkedA: true,
