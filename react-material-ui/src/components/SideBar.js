@@ -80,6 +80,13 @@ function SideBar({ classes }) {
             </ListItemIcon>
             <ListItemText primary={"Select"} />
           </ListItem>
+
+          <ListItem component={Link} to={"/slider"} button>
+            <ListItemIcon>
+              <Send />
+            </ListItemIcon>
+            <ListItemText primary={"Slider"} />
+          </ListItem>
         </List>
         <Divider />
       </Drawer>
