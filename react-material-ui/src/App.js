@@ -13,6 +13,7 @@ import SideBar from "./components/SideBar";
 import RadioButton from "./pages/RadioButton";
 import Select from "./pages/Select";
 import Slider from "./pages/Slider";
+import SwitchPage from "./pages/Switch";
 
 const theme = createMuiTheme({
   palette: {
@@ -98,6 +99,10 @@ function App() {
 
             <Route exact path="/slider">
               <Slider />
+            </Route>
+
+            <Route exact path="/switch">
+              <SwitchPage />
             </Route>
 
             <Route exact path="/">

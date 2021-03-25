@@ -87,6 +87,14 @@ function SideBar({ classes }) {
             </ListItemIcon>
             <ListItemText primary={"Slider"} />
           </ListItem>
+
+          <ListItem component={Link} to={"/switch"} button>
+            <ListItemIcon>
+              <Send />
+            </ListItemIcon>
+            <ListItemText primary={"Switch"} />
+          </ListItem>
+
         </List>
         <Divider />
       </Drawer>
