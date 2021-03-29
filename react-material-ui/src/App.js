@@ -15,6 +15,7 @@ import Select from "./pages/Select";
 import Slider from "./pages/Slider";
 import SwitchPage from "./pages/Switch";
 import TextFieldPage from "./pages/TextField";
+import TransferList from "./pages/TransferList";
 
 const theme = createMuiTheme({
   palette: {
@@ -108,6 +109,11 @@ function App() {
 
             <Route exact path="/textfield">
               <TextFieldPage />
+            </Route>
+
+
+            <Route exact path="/transfer-list">
+              <TransferList />
             </Route>
 
             <Route exact path="/">

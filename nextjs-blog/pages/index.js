@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Read <Link href="/posts/first-post">This page!</Link>
         </h1>
 
         <p className="description">
@@ -18,6 +20,13 @@ export default function Home() {
         </p>
 
         <div className="grid">
+          <Image
+            src="/images/profile.jpg" // Route of the image file
+            height={144} // Desired size with correct aspect ratio
+            width={144} // Desired size with correct aspect ratio
+            alt="Your Name"
+          />
+
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -47,17 +56,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
 
       <style jsx>{`
         .container {
@@ -205,5 +203,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }

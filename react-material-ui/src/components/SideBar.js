@@ -26,82 +26,64 @@ function SideBar({ classes }) {
         <Divider />
         <List>
           <ListItem component={Link} to={"/"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Home"} />
           </ListItem>
 
           <ListItem component={Link} to={"/button"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Button"} />
           </ListItem>
 
           <ListItem component={Link} to={"/checkbox"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Checkbox"} />
           </ListItem>
 
           <ListItem component={Link} to={"/button-group"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Button Group"} />
           </ListItem>
 
           <ListItem component={Link} to={"/floating-action-button"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Floating Action Button"} />
           </ListItem>
 
           <ListItem component={Link} to={"/date-time"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Datetime"} />
           </ListItem>
 
           <ListItem component={Link} to={"/radio-button"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Radio Button"} />
           </ListItem>
 
           <ListItem component={Link} to={"/select"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Select"} />
           </ListItem>
 
           <ListItem component={Link} to={"/slider"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon></ListItemIcon>
             <ListItemText primary={"Slider"} />
           </ListItem>
 
           <ListItem component={Link} to={"/switch"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Switch"} />
           </ListItem>
 
           <ListItem component={Link} to={"/textfield"} button>
-            <ListItemIcon>
-              <Send />
-            </ListItemIcon>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
             <ListItemText primary={"Text Field"} />
           </ListItem>
 
+          <ListItem component={Link} to={"/transfer-list"} button>
+            <ListItemIcon>{/* <Send /> */}</ListItemIcon>
+            <ListItemText primary={"Transfer List"} />
+          </ListItem>
         </List>
         <Divider />
       </Drawer>

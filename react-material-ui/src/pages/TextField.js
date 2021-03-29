@@ -8,7 +8,7 @@ import {
   useTheme,
 } from "@material-ui/core";
 import NumberFormat from "react-number-format";
-import MaskedInput from 'react-text-mask'
+import MaskedInput from "react-text-mask";
 import { AccountCircle, Visibility, VisibilityOff } from "@material-ui/icons";
 import PropTypes from "prop-types";
 
