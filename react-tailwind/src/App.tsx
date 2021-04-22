@@ -2,17 +2,22 @@ import React from "react";
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import MainLayout from "./layouts/MainLayout";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Element from "./pages/Element";
 
 function App() {
   return (
     <MainLayout>
       <div>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde quam
-          tempora, accusamus alias, dolores quisquam, debitis facere cumque
-          tenetur nobis beatae! Dolore molestiae, molestias placeat enim quis
-          tempore hic ipsum.
-        </p>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/elements">
+            <Element />
+          </Route>
+        </Switch>
       </div>
     </MainLayout>
   );
