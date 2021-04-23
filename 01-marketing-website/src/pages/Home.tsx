@@ -84,7 +84,7 @@ function Home() {
 
                 <div className="grid grid-cols-2 gap-4">
                   {Posts.slice(0, 2).map((p) => (
-                    <a href="#">
+                    <Link to={"/blog/" + p._id}>
                       <div className="grid grid-cols-5 gap-8">
                         <div className="col-span-2">
                           <img
@@ -102,7 +102,7 @@ function Home() {
                           </p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </div>
 
