@@ -1,19 +1,12 @@
 import React from "react";
 import { Posts } from "../const";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <main>
       <div>
-        <div className="section-1 bg-primary border-t-4 border-secondary">
-          <div className="w-full flex items-center justify-center py-6">
-            <a href="#">
-              <img className="block" src="/logo.svg" alt="" />
-            </a>
-          </div>
-        </div>
-
         <div className="section2 bg-main">
           <div className="bg-opacity-80 h-3/4vh bg-secondary flex items-center justify-start">
             <div className="px-80 text-white">
@@ -113,10 +106,15 @@ function Home() {
                   ))}
                 </div>
 
-                <div className="text-center mt-16">
-                  <button className="my-4 px-8 py-4 bg-primary text-secondary uppercase font-bold">
-                    View All Posts
-                  </button>
+                <div className="text-center mt-24">
+                  <div>
+                    <Link
+                      to="/blog"
+                      className="my-4 px-8 py-4 bg-primary text-secondary uppercase font-bold"
+                    >
+                      View All Posts
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,27 +127,22 @@ function Home() {
               <div>
                 <div className="text-center text-white">
                   <h1 className="text-6xl">Ready to take the next step?</h1>
-                  <p className="py-6">
+                  <p className="py-8">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore
                     magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
                     quis nostrud exerci tation ullamcorper suscipit lobortis
                     nisl ut aliquip ex ea commodo consequat.
                   </p>
-                  <button className="my-4 px-8 py-4 bg-primary text-secondary uppercase font-bold">
-                    Contact US
-                  </button>
+                  <div>
+                    <Link
+                      to="/contact"
+                      className="my-4 px-8 py-4 bg-primary text-secondary uppercase font-bold"
+                    >
+                      Contact US
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer bg-white w-full h-24">
-          <div className="h-full flex items-center justify-center">
-            <div>
-              <div className="text-secondary text-sm">
-                <p>© 2021 TakeShape, Inc.</p>
               </div>
             </div>
           </div>
