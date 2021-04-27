@@ -1,7 +1,10 @@
-import { createContext, FunctionComponent, useReducer } from "react";
-import { initialState, reducer } from "./state";
+import { createContext, FunctionComponent, useReducer, Dispatch } from "react";
+import { initialState, reducer, State, Action } from "./state";
 
-export const appContext = createContext({});
+export const appContext = createContext<[State, Dispatch<Action<any>>]>([
+  initialState,
+  () => {},
+]);
 
 export const AppProvider: FunctionComponent = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

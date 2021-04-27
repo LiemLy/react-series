@@ -1,15 +1,17 @@
-import { CharacterModel } from "../services/characterService";
+import { MovieModel } from "../services/movieService";
 
 export interface State {
-  characters: Array<CharacterModel>;
+  popularMovies: Array<MovieModel>;
+  movies: Array<MovieModel>;
 }
 
 export const initialState: State = {
-  characters: [],
+  popularMovies: [],
+  movies: [],
 };
 
 export enum ACTION_TYPES {
-  GET_ALL_CHARACTER,
+  GET_POPULAR_MOVIE,
 }
 
 export interface Action<T> {
@@ -22,11 +24,11 @@ type Reducer<T = any> = (state: State, payload?: T) => State;
 
 export const reducer: Transducer = (state, action) => {
   switch (action.type) {
-    case ACTION_TYPES.GET_ALL_CHARACTER:
+    case ACTION_TYPES.GET_POPULAR_MOVIE:
       return {
         ...state,
         ...{
-          characters: action.payload,
+          popularMovies: action.payload,
         },
       };
     default:

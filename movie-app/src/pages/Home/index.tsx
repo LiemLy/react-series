@@ -1,21 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CharacterModel, characterService } from "../services/characterService";
-import { ACTION_TYPES, appContext } from "../states";
+
+import { ACTION_TYPES, appContext } from "../../states";
 
 function Home() {
   const [state, dispatch]: any = useContext(appContext);
 
-  useEffect(() => {
-    characterService.getAll().then((result) => {
-      dispatch({
-        type: ACTION_TYPES.GET_ALL_CHARACTER,
-        payload: result,
-      });
-    });
-  }, []);
-
-  const characters: Array<CharacterModel> = state.characters;
+  useEffect(() => {}, []);
 
   return (
     <div>
