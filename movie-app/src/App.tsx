@@ -5,17 +5,16 @@ import Home from "./pages/Home";
 import { AppProvider } from "./states";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Detail from "./pages/Detail";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <AppProvider>
       <Router>
         <div className="App">
-          <div className="w-3/5 m-auto">
-            <h1 className="mt-16 text-5xl font-bold text-center">
-              <Link to="/">Character Wiki</Link>
-            </h1>
+          <Navbar />
 
+          <div className="w-3/5 m-auto">
             <Switch>
               <Route exact path="/">
                 <Home />
