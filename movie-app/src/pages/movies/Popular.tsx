@@ -21,7 +21,6 @@ function PopularPage() {
   useEffect(() => {
     movieService.getPopularMovies().then((result) => {
       console.log(result);
-
       dispatch({
         type: ACTION_TYPES.GET_POPULAR_MOVIE,
         payload: result.results,
@@ -30,6 +29,28 @@ function PopularPage() {
   }, []);
 
   const movies = state.popularMovies;
+  const isLoadingLoadMore = state.isLoadingLoadMore;
+
+  const loadMore = () => {
+    dispatch({
+      type: ACTION_TYPES.LOAD_MORE_POPULAR_MOVIE,
+      payload: {},
+    });
+    movieService
+      .getPopularMovies(state.popularPage + 1)
+      .then((result) => {
+        dispatch({
+          type: ACTION_TYPES.LOAD_MORE_POPULAR_MOVIE_SUCCESS,
+          payload: result.results,
+        });
+      })
+      .catch((err) => {
+        dispatch({
+          type: ACTION_TYPES.LOAD_MORE_POPULAR_MOVIE_FAILED,
+          payload: {},
+        });
+      });
+  };
 
   return (
     <div>
@@ -42,10 +63,7 @@ function PopularPage() {
           <div className="grid grid-cols-5 gap-4">
             <div className="col-span-1">
               <div className="mb-4">
-                <select
-                  className="block w-full text-gray-700 py-2 border-2 border-gray-200 bg-white rounded-md focus:outline-none focus:ring-primary-500 focus:border-primary-500"
-                  name="animals"
-                >
+                <select className="form-select w-full rounded-md" name="sort">
                   <option value="">Select an options</option>
                   {SORT.map((v) => {
                     return <option value={v.value}>{v.name}</option>;
@@ -93,8 +111,16 @@ function PopularPage() {
                 })}
               </div>
 
-              <div className="text-center my-12">
-                <button className="bg-blue-900 text-white px-4 py-2 font-bold rounded-md hover:bg-blue-800">
+              <div className="flex items-center justify-center my-12">
+                <button
+                  onClick={loadMore}
+                  className="bg-blue-900 text-white px-4 py-2 font-bold rounded-md hover:bg-blue-800 flex justify-center items-center"
+                >
+                  {isLoadingLoadMore ? (
+                    <div className="mr-2 loader ease-linear rounded-full border-2 w-4 h-4 border-gray-200"></div>
+                  ) : (
+                    <div></div>
+                  )}
                   Load More
                 </button>
               </div>

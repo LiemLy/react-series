@@ -35,9 +35,9 @@ class MovieService {
     this.language = `en`;
   }
 
-  async getPopularMovies(): Promise<ResultGetPopularMovies> {
+  async getPopularMovies(page: number = 1): Promise<ResultGetPopularMovies> {
     const result = await axios.get(
-      `${this.host}/movie/popular?api_key=${this.apiKey}&language=${this.language}`
+      `${this.host}/movie/popular?api_key=${this.apiKey}&language=${this.language}&page=${page}`
     );
 
     return result.data;

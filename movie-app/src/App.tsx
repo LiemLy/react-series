@@ -14,7 +14,10 @@ function App() {
         <div className="antialiased">
           <Navbar />
 
-          <div className="w-4/5 m-auto">
+          <div
+            style={{ minHeight: "calc(100vh - 15rem)" }}
+            className="w-4/5 m-auto"
+          >
             <Switch>
               <Route exact path="/">
                 <Home />
