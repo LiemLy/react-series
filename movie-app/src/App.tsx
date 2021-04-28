@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import PopularPage from "./pages/movies/Popular";
 import Footer from "./components/Footer";
+import DetailMoviePage from "./pages/movies/DetailMovie";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
               </Route>
               <Route exact path="/movie/popular">
                 <PopularPage />
+              </Route>
+              <Route exact path="/movie/:id">
+                <DetailMoviePage />
               </Route>
             </Switch>
           </div>

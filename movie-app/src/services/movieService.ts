@@ -42,6 +42,14 @@ class MovieService {
 
     return result.data;
   }
+
+  async getDetailMovie(id: string): Promise<MovieModel> {
+    const result = await axios.get(
+      `${this.host}/movie/${id}?api_key=${this.apiKey}&language=${this.language}`
+    );
+
+    return result.data;
+  }
 }
 
 const movieService = new MovieService();

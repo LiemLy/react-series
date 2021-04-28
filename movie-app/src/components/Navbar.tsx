@@ -21,8 +21,8 @@ function Navbar() {
                     </Link>
 
                     <div>
-                      <a className="text-white pl-4 py-2 rounded-md font-bold group inline-block relative cursor-pointer">
-                        <span className="flex items-center justify-center">
+                      <a className="text-white pl-4 py-2 rounded-md group inline-block relative cursor-pointer">
+                        <span className="font-bold flex items-center justify-center">
                           Movies <VscChevronDown />
                         </span>
                         <ul className="absolute hidden group-hover:block bg-white shadow-md rounded-sm text-gray-800 p-4 w-48">
