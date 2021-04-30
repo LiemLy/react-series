@@ -15,22 +15,22 @@ function App() {
         <div className="antialiased">
           <Navbar />
 
-          <div
+          {/* <div
             style={{ minHeight: "calc(100vh - 15rem)" }}
             className="w-4/5 m-auto"
-          >
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/movie/popular">
-                <PopularPage />
-              </Route>
-              <Route exact path="/movie/:id">
-                <DetailMoviePage />
-              </Route>
-            </Switch>
-          </div>
+          > */}
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/movie/popular">
+              <PopularPage />
+            </Route>
+            <Route exact path="/movie/:id">
+              <DetailMoviePage />
+            </Route>
+          </Switch>
+          {/* </div> */}
 
           <Footer />
         </div>

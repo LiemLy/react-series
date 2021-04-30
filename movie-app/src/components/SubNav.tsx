@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function SubNav() {
   return (
-    <div className="bg-white">
+    <div className="bg-white z-10 relative">
       <div>
         <div className="flex items-center justify-center">
           <div className="py-2 px-2 mx-2">

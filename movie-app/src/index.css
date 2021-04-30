@@ -8,6 +8,14 @@
   animation: spinner 1.5s linear infinite;
 }
 
+.bg-poster {
+  background: linear-gradient(
+    to right,
+    rgba(8.63%, 9.02%, 10.59%, 1) 150px,
+    rgba(8.63%, 9.02%, 10.59%, 0.84) 100%
+  );
+}
+
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);
